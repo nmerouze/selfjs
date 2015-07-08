@@ -1,4 +1,4 @@
-# selfjs [![GoDoc](https://godoc.org/github.com/nmerouze/selfjs?status.png)](https://godoc.org/github.com/nmerouze/selfjs)
+# Self.js [![GoDoc](https://godoc.org/github.com/nmerouze/selfjs?status.png)](https://godoc.org/github.com/nmerouze/selfjs)
 
 Wrapper around [v8worker](https://github.com/ry/v8worker) and `net/http`. Run Universal React applications faster than Node.js.
 
@@ -44,4 +44,4 @@ go run server.go
 open http://localhost:8080
 ```
 
-The application is rendered on the server. Both the client and the server share the same file (universal.js) with a few conditions to select the right rendering function. The code also runs on Node.js, just run `node server.js`. Eco.js is 50% than Node.js while Node.js consumes 50% memory.
+The application is rendered on the server. Both the client and the server share the same file (universal.js) with a few conditions to select the right rendering function. The code also runs on Node.js, just run `node server.js`. Self.js is 50% than Node.js while Node.js consumes 50% memory.
