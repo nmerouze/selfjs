@@ -35,7 +35,7 @@ func newWorker(pool *workerPool, fn func(*Worker)) *Worker {
 
 	v8w := v8worker.New(func(msg string) {
 		w.ch <- msg
-	})
+	}, v8worker.DiscardSendSync)
 
 	w.Worker = v8w
 
