@@ -30,12 +30,14 @@ loop:
 	return pool
 }
 
+func discardSendSync(msg string) string { return "" }
+
 func newWorker(pool *workerPool, fn func(*Worker)) *Worker {
 	w := new(Worker)
 
 	v8w := v8worker.New(func(msg string) {
 		w.ch <- msg
-	}, v8worker.DiscardSendSync)
+	}, discardSendSync)
 
 	w.Worker = v8w
 
